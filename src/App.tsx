@@ -1,12 +1,11 @@
-import { Button } from 'antd'
-import React from 'react'
+import React, { Suspense } from 'react'
 import './App.less'
-
-function App() {
+import Routes from './router/index'
+const App = () => {
   return (
-    <div className="App">
-      <Button>点击</Button>
-    </div>
+    <Suspense fallback={<div>Loading</div>}>
+      <Routes />
+    </Suspense>
   )
 }
 
