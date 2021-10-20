@@ -1,5 +1,9 @@
-import React from 'react'
+import React from 'react';
+import useStores from '../../stores';
 const User: React.FC<{}> = () => {
-  return <div>我是用户</div>
-}
-export default User
+  const { userStore } = useStores();
+  const { name } = userStore;
+
+  return <div>我是用户,{name}</div>;
+};
+export default User;
